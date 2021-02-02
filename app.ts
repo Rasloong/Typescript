@@ -1,6 +1,6 @@
-//aunque en ts marca error por falta de linea en js corre perfectamente
+
 (function(){
-   function saludar(nombre){
+   function saludar(nombre:string){
     console.log('Hola '+nombre);
     
    }
