@@ -1,27 +1,7 @@
-
-(function(){
-   function saludar(nombre:string){
-    console.log('Hola '+nombre);
-    
-   }
-   const wolverine={nombre:'Logan'}
-   let mensaje='yo no fui';
-   saludar(wolverine.nombre);
-   console.log(mensaje);
-   mensaje='hola no me perdi';
-   console.log(mensaje);
-   let msj:string='hola';
-   let numero=1243;
-   let boleano=true;//false
-   let hoy:Date=new Date();
-   let any;
-   
-   any=msj;
-   any=numero;
-   any=boleano;
-   any=hoy;
-
-   let spiderman={nombre:'Peter',edad:30};
-   spiderman={nombre:'miles',edad:14};
+(function () {
+  const nombre = "Jorge Luis";
+  const apellido = "Arango Morales";
+  const edad = 30;
+  const salida=`Nombre: (${nombre}) Apellidos : (${apellido}) Edad : (${edad})`;
+  console.log(salida);
 })();
-
