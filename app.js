@@ -1,25 +1,20 @@
 "use strict";
 (function () {
-    var mifuncion = function (a) {
-        return a.toUpperCase();
+    var avenger = {
+        nombre: "Steve",
+        clave: "Capitan America",
+        poder: "Valor",
     };
-    var miflecha = function (a) { return a.toUpperCase(); };
-    console.log(mifuncion("Normal"));
-    console.log(miflecha("Flecha"));
-    var sumarN = function (a, b) {
-        return a + b;
+    var extraer = function (_a) {
+        var nombre = _a.nombre, clave = _a.clave, poder = _a.poder;
+        console.log(nombre);
+        console.log(clave);
+        console.log(poder);
     };
-    var sumarF = function (a, b) { return a + b; };
-    console.log(sumarN(5, 5));
-    console.log(sumarF(7, 5));
-    var hulk = {
-        nombre: "Hulk",
-        smash: function () {
-            var _this = this;
-            setTimeout(function () {
-                console.log(_this.nombre + " smash!!!");
-            }, 1000);
-        },
-    };
-    hulk.smash();
+    //extraer(avenger);
+    var avengers = ['Thor', 'Ironman', 'Spiderman'];
+    var a = avengers[0], b = avengers[1], c = avengers[2];
+    console.log(a);
+    console.log(b);
+    console.log(c);
 })();

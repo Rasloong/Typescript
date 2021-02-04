@@ -1,26 +1,21 @@
-(function () {
-  const mifuncion = function (a: string) {
-    return a.toUpperCase();
+(() => {
+  const avenger = {
+    nombre: "Steve",
+    clave: "Capitan America",
+    poder: "Valor",
   };
-  const miflecha = (a: string) => a.toUpperCase();
 
-  console.log(mifuncion("Normal"));
-  console.log(miflecha("Flecha"));
+  const extraer = ({nombre,clave,poder}:any) => {
 
-  const sumarN = function (a: number, b: number) {
-    return a + b;
+    console.log(nombre);
+    console.log(clave);
+    console.log(poder);
   };
-  const sumarF = (a: number, b: number) => a + b;
+ //extraer(avenger);
+  const avengers:string[]=['Thor','Ironman','Spiderman'];
 
-  console.log(sumarN(5, 5));
-  console.log(sumarF(7, 5));
-
-  const hulk = {
-    nombre: "Hulk",
-    smash() {
-      setTimeout( () => {console.log(`${this.nombre} smash!!!`);
-      }, 1000);
-    },
-  };
-  hulk.smash();
+  const[a,b,c]=avengers;
+  console.log(a);
+  console.log(b);
+  console.log(c);
 })();
