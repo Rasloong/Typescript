@@ -1,8 +1,14 @@
 "use strict";
 (function () {
-    var nombre = "Jorge Luis";
-    var apellido = "Arango Morales";
-    var edad = 30;
-    var salida = "Nombre: (" + nombre + ") Apellidos : (" + apellido + ") Edad : (" + edad + ")";
-    console.log(salida);
+    function activar(quien, momento, objeto) {
+        if (objeto === void 0) { objeto = "Batiseñal"; }
+        if (momento) {
+            console.log(quien + " activo la " + objeto + " en " + momento);
+        }
+        else {
+            console.log(quien + " activo la " + objeto);
+        }
+    }
+    activar('Gordon', 'tarde');
+    activar('Gordon');
 })();

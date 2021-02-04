@@ -1,7 +1,14 @@
 (function () {
-  const nombre = "Jorge Luis";
-  const apellido = "Arango Morales";
-  const edad = 30;
-  const salida=`Nombre: (${nombre}) Apellidos : (${apellido}) Edad : (${edad})`;
-  console.log(salida);
+  function activar(quien: string, 
+                    momento?:string,
+                    objeto: string = "Batiseñal"
+                     ) {
+                      if(momento){
+                        console.log(`${quien} activo la ${objeto} en ${momento}`);
+                      }else{
+                        console.log(`${quien} activo la ${objeto}`);
+                      }
+  }
+  activar('Gordon','tarde');
+  activar('Gordon');
 })();
