@@ -1,21 +1,12 @@
 (() => {
-  const avenger = {
-    nombre: "Steve",
-    clave: "Capitan America",
-    poder: "Valor",
-  };
-
-  const extraer = ({nombre,clave,poder}:any) => {
-
-    console.log(nombre);
-    console.log(clave);
-    console.log(poder);
-  };
- //extraer(avenger);
-  const avengers:string[]=['Thor','Ironman','Spiderman'];
-
-  const[a,b,c]=avengers;
-  console.log(a);
-  console.log(b);
-  console.log(c);
+  console.log("Inicio");
+  const prom1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject("Se termino el timeout");
+    }, 1000);
+  });
+  prom1.then((mensaje) => console.log(mensaje))
+        .catch(err=>console.error(err));
+  console.log("Fin");
+  
 })();
