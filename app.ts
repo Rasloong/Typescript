@@ -1,21 +1,30 @@
 (() => {
+  /*class Avenger{
+    nombre:string;
+    equipo:string;
+    nombreReal:string;
+    puedePelear?:boolean;
+    Victorias:number;
 
-  interface Xmen{
-    nombre:string
-    edad:number;
-    poder?:string;
-  }
+    constructor(nm:string,tf:string,nr:string,p:boolean,v:number){
+      this.nombre=nm;
+      this.equipo=tf;
+      this.nombreReal=nr;
+      this.puedePelear=p;
+      this.Victorias=v;
+    }
+  }*/
 
-  const enviarMision=(sujeto:Xmen)=>{
-    console.log(`Enviando a ${sujeto.nombre} a la mision`);
+  class Avenger {
+    constructor(
+      public nombre: string,
+      public equipo: string,
+      public nombreReal: string='Confidencial',
+      public puedePelear: boolean = false,
+      public Victorias: number = 0
+    ) {}
   }
+  const antman = new Avenger("Antman", "Cap");
 
-  const RegresarMision=(sujeto:Xmen)=>{
-    console.log(`Enviando a ${sujeto.nombre} a la mision`);
-  }
-  const wolverine:Xmen={
-    nombre:'Logan',
-    edad:30
-  }
-  enviarMision(wolverine);
+  console.log(antman);
 })();
