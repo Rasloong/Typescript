@@ -1,12 +1,15 @@
 (() => {
-  console.log("Inicio");
-  const prom1 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      reject("Se termino el timeout");
-    }, 1000);
-  });
-  prom1.then((mensaje) => console.log(mensaje))
-        .catch(err=>console.error(err));
-  console.log("Fin");
-  
+  const retirarDinero = (montoRetirar: number):Promise<number>=> {
+    let dineroActual = 1000;
+    return new Promise((resolve, reject) => {
+      if (montoRetirar > dineroActual) {
+        reject("No Tienes Fondos Suficientes");
+      } else {
+        dineroActual -= montoRetirar;
+        resolve(dineroActual);
+      }
+    });
+  };
+  retirarDinero(1500).then(montoActual=>console.log(`Quedan ${montoActual}`))
+                    .catch(err=>console.error(err));
 })();
