@@ -1,30 +1,16 @@
 (() => {
-  /*class Avenger{
-    nombre:string;
-    equipo:string;
-    nombreReal:string;
-    puedePelear?:boolean;
-    Victorias:number;
 
-    constructor(nm:string,tf:string,nr:string,p:boolean,v:number){
-      this.nombre=nm;
-      this.equipo=tf;
-      this.nombreReal=nr;
-      this.puedePelear=p;
-      this.Victorias=v;
+    const sumar=(a:number,b:number):number=>{
+      return a+b;
     }
-  }*/
 
-  class Avenger {
-    constructor(
-      public nombre: string,
-      public equipo: string,
-      public nombreReal: string='Confidencial',
-      public puedePelear: boolean = false,
-      public Victorias: number = 0
-    ) {}
-  }
-  const antman = new Avenger("Antman", "Cap");
+    const nombre =():string=>'Hola Jorge';
 
-  console.log(antman);
+    const obtenerSalario=():Promise<string>=>{
+      return new Promise((resolve,reject)=>{
+        resolve('Fernando');
+      });
+    }
+
+    obtenerSalario().then(a=>console.log(a.toUpperCase()))
 })();
